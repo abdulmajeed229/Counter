@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+}
+.box{
+    height: 200px;
+    width: 320px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(239, 239, 240);
+    box-shadow: 0px 0px 5px rgb(149, 168, 253);
+}
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button{
+    height: 35px;
+    width: 100px;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0px 0px 2px blue;
+}
+button:hover{
+    background-color: rgb(131, 131, 255);
+    color: white;
+    transition: 0.6s;
+}
+    </style>
+    <div class="box">
+
+        <h1>Counter</h1>
+        <h1 id="text">0</h1>
+
+        <button id="plus">Inc++</button>
+        <button id="minus">Dec++</button>
+
+        <button id="reset">Reset</button>
+
+    </div>
+
+    <script>
+
+        let plus = document.getElementById('plus');
+        let minus = document.getElementById('minus');
+        let reset = document.getElementById('reset');
+        let text = document.getElementById('text');
+
+let Number = 0 ;
+
+
+
+
+
+
+        plus.addEventListener('click' , function(){
+
+            Number++
+
+            text.innerText = Number ;
+        });
+
+        
+        minus.addEventListener('click' , function(){
+
+Number--
+
+if( Number < 0 ){
+    Number = 0 ;
+}
+text.innerText = Number ;
+});
+
+
+reset.addEventListener('click' , function(){
+
+Number = 0 ;
+
+text.innerText = Number ;
+});
+    </script>
+    
+</body>
+</html>
